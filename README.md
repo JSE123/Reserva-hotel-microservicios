@@ -88,4 +88,4 @@ POST /bookings/create - Crear reserva (Valida checkIn y checkOut).
 GET /bookings/{id} - Detalle de reserva con datos agregados.
 
 ## ✉️ Contacto
-José Silva - [LinkedIn](www.linkedin.com/in/josesilvap) - jsemnuel101@gm
+José Silva - [LinkedIn](https://www.linkedin.com/in/josesilvap) - jsemnuel101@gm
