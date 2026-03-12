@@ -76,15 +76,16 @@ Gracias a la librería common-exceptions, todos los servicios devuelven un forma
 Implementación de valores por defecto para estados de habitación directamente en la lógica de JPA, asegurando que cada habitación nueva nazca como AVAILABLE.
 
 ## 📌 Endpoints Principales
+
 * Inventory Service (Puerto 8085)
 GET /inventory/api/v1/rooms/{id} - Detalle de habitación.
 
 PATCH /inventory/api/v1/rooms/{id}/occupy - Marcar como ocupada.
 
 * Booking Service (Puerto 8084)
-POST /api/bookings - Crear reserva (Valida checkIn y checkOut).
+POST /bookings/create - Crear reserva (Valida checkIn y checkOut).
 
-GET /api/bookings/{id} - Detalle de reserva con datos agregados.
+GET /bookings/{id} - Detalle de reserva con datos agregados.
 
 ## ✉️ Contacto
 José Silva -  - jsemnuel101@gm
