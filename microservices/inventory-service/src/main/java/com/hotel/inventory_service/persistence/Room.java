@@ -2,6 +2,7 @@ package com.hotel.inventory_service.persistence;
 
 import com.hotel.inventory_service.enums.RoomStatus;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -26,12 +27,15 @@ public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(unique = true, nullable = false)
     private String roomNumber;
 
     @ManyToOne
     @JoinColumn(name = "room_type_id")
     private RoomType roomType;
 
+    @Column(length = 200)
     private String description;
 
     @Enumerated(EnumType.STRING)
