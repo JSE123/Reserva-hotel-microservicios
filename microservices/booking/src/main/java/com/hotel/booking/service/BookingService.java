@@ -36,7 +36,10 @@ public class BookingService {
             return "User not found";
         }
 
-        if (room.status() != RoomStatus.AVAILABLE) {
+        if (bookingRepository.existsByRoomIdAndCheckInLessThanAndCheckOutGreaterThan(
+                bookingDTO.roomId(),
+                bookingDTO.checkOutDate(),
+                bookingDTO.checkInDate())) {
             return "Room is not available for booking";
         }
 
